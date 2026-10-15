@@ -1,17 +1,124 @@
 {
-  "title": "Ass 1 2026",
-  "source": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_de26/Assignment-1-(2025).pdf",
+  "title": "Assignment 1 (2025)",
+  "source": "Assignment-1-(2025).PDF",
   "questions": [
     {
-      "question": "Example question — replace this with a question from the assignment.",
+      "question": "What makes an idea valuable even if it fails?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Avoiding collaboration to prevent shared blame",
+        "Gaining valuable lessons and insights from the failure",
+        "Shifting focus to unrelated projects immediately",
+        "Disregarding accountability and blaming external factors"
+      ],
+      "answer": 1,
+      "explanation": "Gaining valuable lessons and insights from the failure."
+    },
+    {
+      "question": "What are some key characteristics essential for a business to achieve success?",
+      "options": [
+        "The ability to balance expenses while maintaining product quality",
+        "Ignoring customer feedback to prioritize internal goals",
+        "Strategic planning and adaptability to market changes",
+        "Focusing solely on profit maximization"
+      ],
+      "answer": 2,
+      "explanation": "Strategic planning and adaptability to market changes."
+    },
+    {
+      "question": "What are the primary objectives of selling a product or service, and how do these address customer needs?",
+      "options": [
+        "Identifying and fulfilling customer and market needs",
+        "Maximizing profits through aggressive pricing strategies",
+        "Focusing on complex promotional campaigns",
+        "Offering discounts to increase sales"
       ],
       "answer": 0,
-      "explanation": "Optional explanation shown after checking the answer."
+      "explanation": "Identifying and fulfilling customer and market needs."
+    },
+    {
+      "question": "What makes an idea “disruptive”?",
+      "options": [
+        "Maintaining the existing state and avoiding innovation",
+        "Imitating successful competitors to gain market share",
+        "Introducing changes that challenge existing market norms",
+        "Strictly adhering to traditional market standards"
+      ],
+      "answer": 2,
+      "explanation": "Introducing changes that challenge existing market norms."
+    },
+    {
+      "question": "How does entrepreneurship contribute to economic growth?",
+      "options": [
+        "By developing robust business models without innovation",
+        "By focusing solely on customer validation and discovery",
+        "By identifying and solving market problems effectively",
+        "By avoiding competitive risks through market isolation"
+      ],
+      "answer": 2,
+      "explanation": "By identifying and solving market problems effectively."
+    },
+    {
+      "question": "What is emphasized in the Lean Startup methodology for product development?",
+      "options": [
+        "Graduation degrees as a prerequisite for entrepreneurship",
+        "Rigid execution of initial business plans",
+        "Financial optimization over product innovation",
+        "Continuous learning and validation through customer feedback"
+      ],
+      "answer": 3,
+      "explanation": "Continuous learning and validation through customer feedback."
+    },
+    {
+      "question": "What are the key objectives of the Lean Startup methodology when launching a new product or service?",
+      "options": [
+        "Customer validation and iterative development",
+        "Company building without market analysis",
+        "Rapid scaling and long-term planning",
+        "Agile engineering without customer feedback"
+      ],
+      "answer": 0,
+      "explanation": "Customer validation and iterative development."
+    },
+    {
+      "question": "How do institutions foster innovation and entrepreneurship effectively?",
+      "options": [
+        "By connecting academic research to practical applications in the market",
+        "By focusing exclusively on theoretical research",
+        "By isolating themselves from marketplace collaborations",
+        "By discouraging experimentation within the institution"
+      ],
+      "answer": 0,
+      "explanation": "By connecting academic research to practical applications in the market."
+    },
+    {
+      "question": "How can evidence-based entrepreneurship be defined and applied effectively?",
+      "options": [
+        "By utilizing validated learning through continuous experimentation and data analysis",
+        "By implementing the Build-Measure-Learn cycle to iteratively develop and improve products",
+        "By making decisions based on empirical evidence rather than assumptions",
+        "By regularly engaging with customers to gather feedback and validate ideas"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The source lists all four options as answers: validated learning, Build-Measure-Learn, evidence-based decisions, and customer feedback."
+    },
+    {
+      "question": "What are some common mistakes startups make?",
+      "options": [
+        "Adopting the Lean Startup methodology",
+        "Focusing too much on the product and neglecting the market",
+        "Developing solutions without engaging potential customers",
+        "Preparing a business plan and estimating market size"
+      ],
+      "answer": [
+        1,
+        2
+      ],
+      "explanation": "The source lists both focusing too much on the product and neglecting the market, and developing solutions without engaging potential customers."
     }
   ]
 }
