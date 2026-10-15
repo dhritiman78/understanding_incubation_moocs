@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assignment Quiz</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#687386;--line:#e4e8f0;--accent:#3659e3;--soft:#edf1ff;--good:#16834a;--bad:#c0392b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{background:#111b35;color:white;padding:22px max(20px,calc((100% - 1000px)/2));}
+header h1{margin:0;font-size:1.35rem}header p{margin:4px 0 0;color:#c7d0e5;font-size:.92rem}
+main{max-width:1000px;margin:28px auto;padding:0 18px 48px}.topline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+h2{font-size:1.35rem;margin:0 0 5px}.muted{color:var(--muted)}.paper-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:left;cursor:pointer;transition:.15s;box-shadow:0 3px 12px #15254b08;color:inherit}
+.paper:hover{border-color:#9baaf7;transform:translateY(-2px)}.paper .tag{display:inline-block;background:var(--soft);color:var(--accent);padding:3px 9px;border-radius:99px;font-size:.78rem;font-weight:700}.paper h3{margin:12px 0 4px;font-size:1.08rem}.paper p{margin:0;color:var(--muted);font-size:.9rem}
+button{font:inherit;cursor:pointer;border:0;border-radius:10px;padding:10px 15px;font-weight:650}.primary{background:var(--accent);color:white}.secondary{background:#edf0f6;color:#27334d}.text-button{background:transparent;color:var(--accent);padding-left:0}
+.hidden{display:none!important}.quiz-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px}.progress-wrap{height:7px;background:#e2e7f0;border-radius:9px;overflow:hidden;margin:14px 0 22px}.progress{height:100%;width:0;background:var(--accent);transition:width .2s}
+.question-card{background:white;border:1px solid var(--line);border-radius:16px;padding:clamp(18px,4vw,28px);box-shadow:0 3px 14px #15254b08}.q-meta{font-size:.86rem;color:var(--muted);margin-bottom:12px}.question{font-size:1.12rem;font-weight:700;margin:0 0 20px;white-space:pre-wrap}.options{display:grid;gap:10px}.option{display:flex;align-items:flex-start;gap:11px;padding:13px 14px;border:1px solid var(--line);border-radius:12px;cursor:pointer}.option:hover{border-color:#9baaf7}.option.selected{border-color:var(--accent);background:var(--soft)}.option input{margin-top:5px;accent-color:var(--accent)}.explanation{margin-top:16px;padding:13px;border-radius:10px;background:#f3f5f9;color:#364158}.quiz-actions{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}.score{font-size:2rem;font-weight:800;margin:8px 0}.empty{padding:24px;border:1px dashed #c9d0df;background:white;border-radius:14px}.footer-note{font-size:.85rem;color:var(--muted);margin-top:20px}
+@media(max-width:520px){header{padding:18px}main{margin-top:20px}.quiz-head{align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><h1>Assignment Practice</h1><p>Choose a paper and test your understanding</p></header>
+<main>
+<section id="home">
+  <div class="topline"><div><h2>Available papers</h2><div class="muted">Select an assignment to start its quiz.</div></div></div>
+  <div class="paper-list" id="paperList"></div>
+  <p class="footer-note">Questions are loaded from each paper's JSON file. Keep this page and the JSON files in the same folder.</p>
+</section>
+<section id="quiz" class="hidden">
+  <button class="text-button" id="backBtn">← All papers</button>
+  <div class="quiz-head"><div><h2 id="quizTitle">Quiz</h2><div class="muted" id="quizSubtitle"></div></div><div class="muted" id="scoreLive"></div></div>
+  <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+  <div id="quizBody"></div>
+</section>
+</main>
+<script>
+const papers = [
+  {title:"Ass 1 2026", file:"ass_w1_2026.json", label:"Assignment 1 · 2026"},
+  {title:"Ass 2 2026", file:"ass_w2_2026.json", label:"Assignment 2 · 2026"}
+];
+const $ = id => document.getElementById(id);
+let activePaper=null, questions=[], current=0, answers={}, checked={}, finished=false;
+
+function renderPapers(){
+  $("paperList").innerHTML="";
+  papers.forEach(p=>{
+    const b=document.createElement("button"); b.className="paper";
+    b.innerHTML=`<span class="tag">PRACTICE QUIZ</span><h3>${escapeHtml(p.title)}</h3><p>Open questions and start practising →</p>`;
+    b.addEventListener("click",()=>loadPaper(p)); $("paperList").appendChild(b);
+  });
+}
+function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+async function loadPaper(p){
+  activePaper=p;
+  try{
+    const res=await fetch(p.file);
+    if(!res.ok) throw new Error(`Could not load ${p.file} (HTTP ${res.status})`);
+    const data=await res.json();
+    questions=Array.isArray(data)?data:(data.questions||[]);
+    if(!questions.length) throw new Error("This JSON file has no questions yet. Add a questions array using the example format.");
+    current=0; answers={}; checked={}; finished=false;
+    $("home").classList.add("hidden"); $("quiz").classList.remove("hidden");
+    $("quizTitle").textContent=p.title;
+    $("quizSubtitle").textContent=`${questions.length} questions`;
+    renderQuestion();
+  }catch(err){
+    alert(`${err.message}\n\nTip: run this folder with a local web server (for example: python -m http.server 8000), then open http://localhost:8000.`);
+  }
+}
+function renderQuestion(){
+  const q=questions[current], selected=answers[current];
+  $("progress").style.width=`${((current+1)/questions.length)*100}%`;
+  $("scoreLive").textContent=finished?`Score: ${calculateScore()} / ${questions.length}`:`Question ${current+1} of ${questions.length}`;
+  const opts=(q.options||[]).map((opt,i)=>{
+    const val=typeof opt==="string"?opt:(opt.text??opt.label??"");
+    const letter=String.fromCharCode(65+i);
+    const isSelected=String(selected)===String(i);
+    let state=isSelected?" selected":"";
+    return `<label class="option${state}"><input type="radio" name="answer" value="${i}" ${isSelected?"checked":""} ${finished?"disabled":""}><span><strong>${letter}.</strong> ${escapeHtml(val)}</span></label>`;
+  }).join("");
+  let feedback="";
+  if(checked[current]||finished){
+    const correct=String(selected)===String(q.answer);
+    feedback=`<div class="explanation" style="background:${correct?"#eaf7ef":"#fff0ef"};color:${correct?"#17663c":"#9c2c24"}"><strong>${correct?"Correct!":"Not quite."}</strong>${q.explanation?`<div style="margin-top:5px;color:#364158">${escapeHtml(q.explanation)}</div>`:""}</div>`;
+  }
+  $("quizBody").innerHTML=`<div class="question-card"><div class="q-meta">QUESTION ${current+1}</div><p class="question">${escapeHtml(q.question||q.text||"Question text missing")}</p><div class="options">${opts}</div>${feedback}<div class="quiz-actions"><button class="secondary" id="prevBtn" ${current===0?"disabled":""}>Previous</button><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">${!finished&&!checked[current]?'<button class="secondary" id="checkBtn">Check answer</button>':""}${current<questions.length-1?'<button class="primary" id="nextBtn">Next question →</button>':finished?'<button class="primary" id="restartBtn">Try again</button>':!checked[current]?'<button class="primary" id="finishBtn">Finish quiz</button>':'<button class="primary" id="finishBtn">Finish quiz</button>'}</div></div></div>`;
+  $("prevBtn").onclick=()=>{if(current>0){current--;renderQuestion();}};
+  const radios=[...document.querySelectorAll('input[name="answer"]')];
+  radios.forEach(r=>r.addEventListener("change",()=>{answers[current]=Number(r.value);renderQuestion();}));
+  if($("checkBtn")) $("checkBtn").onclick=()=>{if(answers[current]===undefined){alert("Choose an answer first.");return;}checked[current]=true;renderQuestion();};
+  if($("nextBtn")) $("nextBtn").onclick=()=>{current++;renderQuestion();};
+  if($("finishBtn")) $("finishBtn").onclick=()=>{finished=true;renderQuestion();};
+  if($("restartBtn")) $("restartBtn").onclick=()=>{current=0;answers={};checked={};finished=false;renderQuestion();};
+  if(finished){
+    const score=document.createElement("div");score.className="empty";score.style.marginTop="14px";
+    score.innerHTML=`<strong>Quiz complete</strong><div class="score">${calculateScore()} / ${questions.length}</div><div class="muted">You answered ${Object.keys(answers).length} of ${questions.length} questions.</div>`;
+    $("quizBody").appendChild(score);
+  }
+}
+function calculateScore(){return questions.reduce((n,q,i)=>n+(String(answers[i])===String(q.answer)?1:0),0);}
+$("backBtn").onclick=()=>{$("quiz").classList.add("hidden");$("home").classList.remove("hidden");};
+renderPapers();
+</script>
+</body>
+</html>

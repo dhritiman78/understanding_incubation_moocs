@@ -1,0 +1,17 @@
+{
+  "title": "Ass 1 2026",
+  "source": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_de26/Assignment-1-(2025).pdf",
+  "questions": [
+    {
+      "question": "Example question — replace this with a question from the assignment.",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "answer": 0,
+      "explanation": "Optional explanation shown after checking the answer."
+    }
+  ]
+}
