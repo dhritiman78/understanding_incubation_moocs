@@ -1,0 +1,119 @@
+{
+  "title": "Ass 2 2026",
+  "source": "Assignment-2-(2025).pdf",
+  "questions": [
+    {
+      "question": "What can be the main reason for the failure of a startup?",
+      "options": [
+        "No real need for the product or service",
+        "A skilled and experienced team",
+        "Having sufficient investors and funding",
+        "Offering a user-friendly product"
+      ],
+      "answer": 0,
+      "explanation": "No real need for the product or service."
+    },
+    {
+      "question": "Which among the following could be a crucial factor in a team’s unity and success?",
+      "options": [
+        "Individual achievements",
+        "Lack of diversity",
+        "Frequent disagreements",
+        "Shared vision and common ideology"
+      ],
+      "answer": 3,
+      "explanation": "Shared vision and common ideology."
+    },
+    {
+      "question": "What are the key objectives of startup founders when launching a product?",
+      "options": [
+        "Achieving rapid market entry without validation",
+        "Iterative development and customer-centric learning",
+        "Long-term planning without short-term feedback",
+        "Building internal teams over market exploration"
+      ],
+      "answer": 1,
+      "explanation": "Iterative development and customer-centric learning."
+    },
+    {
+      "question": "How do customer interactions contribute to effectively identifying and addressing market needs?",
+      "options": [
+        "By gathering direct feedback on products and services",
+        "By uncovering customer pain points and preferences",
+        "By validating business ideas and assumptions",
+        "All of the above"
+      ],
+      "answer": 3,
+      "explanation": "All of the above."
+    },
+    {
+      "question": "What role do early adopters play in helping a company refine its products or services?",
+      "options": [
+        "Assist in marketing the product to a broader audience",
+        "Provide critical feedback to improve the product",
+        "Expand production capacity to meet demands",
+        "Offer financial support for scaling operations"
+      ],
+      "answer": 1,
+      "explanation": "Provide critical feedback to improve the product."
+    },
+    {
+      "question": "Which misconception can mislead startup founders during the growth phase?",
+      "options": [
+        "Securing funding guarantees success",
+        "Scaling the team strategically",
+        "Prioritizing customer needs over product development",
+        "Focusing on team-building over business goals"
+      ],
+      "answer": 0,
+      "explanation": "Securing funding guarantees success."
+    },
+    {
+      "question": "Who plays the most crucial role in validating the success of a startup's product or service?",
+      "options": [
+        "The founder",
+        "The investors",
+        "The customers",
+        "The marketing teams"
+      ],
+      "answer": 2,
+      "explanation": "The customers."
+    },
+    {
+      "question": "What actions should founders take when faced with stagnation in progress?",
+      "options": [
+        "Reevaluate the business strategy and pivot if necessary",
+        "Increase marketing efforts and budget",
+        "Ignore the issue and hope for improvement",
+        "Cut down on expenses and reduce team size"
+      ],
+      "answer": 0,
+      "explanation": "Reevaluate the business strategy and pivot if necessary."
+    },
+    {
+      "question": "What characteristics are essential for a startup team to achieve long-term success?",
+      "options": [
+        "Strong leadership and vision",
+        "Effective communication and collaboration",
+        "Ignoring customer feedback's and focusing on company vision",
+        "Limited market research and focusing on advertisement"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The source lists both strong leadership and vision, and effective communication and collaboration."
+    },
+    {
+      "question": "What is an essential quality that startup founders must possess?",
+      "options": [
+        "Strong belief in the startup's vision",
+        "Pursuit of endless funding",
+        "Rapid product development skills",
+        "Exceptional programming expertise"
+      ],
+      "answer": 0,
+      "explanation": "Strong belief in the startup's vision."
+    }
+  ]
+}

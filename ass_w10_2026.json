@@ -1,0 +1,116 @@
+{
+  "title": "Ass 10 2026",
+  "source": "Assignment-10-(2025).pdf",
+  "questions": [
+    {
+      "question": "What creative thinking technique involves individuals imagining themselves as part of the problem or situation they are trying to solve?",
+      "options": [
+        "Fantasy analogy",
+        "Personal analogy",
+        "Symbolic analogy",
+        "CAD analogy"
+      ],
+      "answer": 1,
+      "explanation": "Personal analogy."
+    },
+    {
+      "question": "Which of the following is NOT a typical prototyping method?",
+      "options": [
+        "Additive methods",
+        "Subtractive methods",
+        "Forming methods",
+        "Lateral thinking"
+      ],
+      "answer": 3,
+      "explanation": "Lateral thinking."
+    },
+    {
+      "question": "What is the correct sequence during a product development process?",
+      "options": [
+        "Ideation → Concept Generation → Prototyping → Testing → Market Launch",
+        "Market Research → Concept Generation → Testing → Ideation → Prototyping",
+        "Concept Generation → Prototyping → Testing → Market Launch → Ideation",
+        "Ideation → Market Launch → Prototype → Testing → Concept Generation"
+      ],
+      "answer": 0,
+      "explanation": "Ideation → Concept Generation → Prototyping → Testing → Market Launch."
+    },
+    {
+      "question": "Which type of reasoning involves forming general conclusions from specific observations?",
+      "options": [
+        "Abductive reasoning",
+        "Deductive reasoning",
+        "Inductive reasoning",
+        "Analytical reasoning"
+      ],
+      "answer": 2,
+      "explanation": "Inductive reasoning."
+    },
+    {
+      "question": "How does frugality in product innovation benefit organizations?",
+      "options": [
+        "By increasing production costs to maximize resources",
+        "By minimizing waste and reducing costs through efficient use of resources",
+        "By prioritizing aesthetics over functionality",
+        "By focusing solely on rapid scaling without cost considerations"
+      ],
+      "answer": 1,
+      "explanation": "By minimizing waste and reducing costs through efficient use of resources."
+    },
+    {
+      "question": "What is the primary purpose of a Proof of Concept (POC)?",
+      "options": [
+        "To validate the feasibility and viability of a new idea or concept",
+        "To generate the final product for market launch",
+        "To secure funding for large-scale production",
+        "To build prototypes for user feedback"
+      ],
+      "answer": 0,
+      "explanation": "To validate the feasibility and viability of a new idea or concept."
+    },
+    {
+      "question": "What does prototyping aim to achieve in the design process?",
+      "options": [
+        "Finalizing the design for immediate market release",
+        "Creating models to test and improve design, functionality, and usability",
+        "Building large-scale production units for market distribution",
+        "Avoiding iterative development to save time"
+      ],
+      "answer": 1,
+      "explanation": "Creating models to test and improve design, functionality, and usability."
+    },
+    {
+      "question": "What is the primary goal of Synectics in the design process?",
+      "options": [
+        "Encouraging exploration and breaking conventional thinking",
+        "Generating a single, perfect solution to a problem",
+        "Reaching consensus among team members quickly",
+        "Applying detailed technical analysis to refine existing concepts"
+      ],
+      "answer": 0,
+      "explanation": "Encouraging exploration and breaking conventional thinking."
+    },
+    {
+      "question": "How can entrepreneurs effectively collaborate with one another?",
+      "options": [
+        "By franchising their mutual businesses",
+        "By sharing resources and distributing production responsibilities",
+        "By competing in the same market segments",
+        "All of the above"
+      ],
+      "answer": 1,
+      "explanation": "By sharing resources and distributing production responsibilities."
+    },
+    {
+      "question": "Why is it important for designers to create prototypes before deploying a product?",
+      "options": [
+        "To identify and resolve design flaws early in the process",
+        "To use prototypes as the final version for market release",
+        "To skip the need for market research and testing",
+        "To focus on aesthetics without user input"
+      ],
+      "answer": 0,
+      "explanation": "To identify and resolve design flaws early in the process."
+    }
+  ]
+}

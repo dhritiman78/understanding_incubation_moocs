@@ -1,0 +1,116 @@
+{
+  "title": "Ass 5 2026",
+  "source": "Assignment-5-(2025).pdf",
+  "questions": [
+    {
+      "question": "What strategies are crucial for converting academic research into practical societal benefits?",
+      "options": [
+        "Establishing obstacles to innovation",
+        "Partnering with industries to link research with real-world applications",
+        "Keeping research results confidential",
+        "Engaging in rivalry with industries to demonstrate academic dominance"
+      ],
+      "answer": 1,
+      "explanation": "Partnering with industries to link research with real-world applications."
+    },
+    {
+      "question": "Why are investors often reluctant to invest in healthcare product startups?",
+      "options": [
+        "High profit margins in the industry",
+        "Poor success rates of medical devices",
+        "Rapidly growing demand for medical devices",
+        "Shorter research and development cycles"
+      ],
+      "answer": 1,
+      "explanation": "Poor success rates of medical devices."
+    },
+    {
+      "question": "What initial step is crucial for developing a successful design solution?",
+      "options": [
+        "Identifying the problem and understanding functional requirements",
+        "Planning marketing campaigns and advertising strategies",
+        "Conducting employee training and managing resources",
+        "Securing Intellectual Property Rights and patents"
+      ],
+      "answer": 0,
+      "explanation": "Identifying the problem and understanding functional requirements."
+    },
+    {
+      "question": "What role did telemedicine play in improving healthcare during global pandemics?",
+      "options": [
+        "Increased healthcare costs without benefits",
+        "Reduced the strain on physical healthcare facilities",
+        "Created barriers for patient access to care",
+        "Complicated the delivery of medical services"
+      ],
+      "answer": 1,
+      "explanation": "Reduced the strain on physical healthcare facilities."
+    },
+    {
+      "question": "What is the main purpose of pilot production in the development process?",
+      "options": [
+        "Generating marketing and advertising content",
+        "Testing and adapting design features based on user feedback",
+        "Filing for patents before large-scale production",
+        "Conducting research in controlled lab environments"
+      ],
+      "answer": 1,
+      "explanation": "Testing and adapting design features based on user feedback."
+    },
+    {
+      "question": "At which point in the innovation process should businesses prioritize securing Intellectual Property Rights (IPR) to protect their inventions?",
+      "options": [
+        "During the initial idea conception",
+        "After developing a working prototype",
+        "Before commercializing the product",
+        "Once the product is widely available in the market"
+      ],
+      "answer": 2,
+      "explanation": "Before commercializing the product."
+    },
+    {
+      "question": "Who is eligible to obtain licenses for Intellectual Property Rights (IPR)?",
+      "options": [
+        "Start-ups only",
+        "Industry professionals only",
+        "Non-Governmental Organizations (NGOs) only",
+        "All of the above"
+      ],
+      "answer": 3,
+      "explanation": "All of the above."
+    },
+    {
+      "question": "What does TRL stand for in the context of innovation and development?",
+      "options": [
+        "Technology Readiness Levels",
+        "Transition and Research Limits",
+        "Technological Resource Level",
+        "Test and Reliability Levels"
+      ],
+      "answer": 0,
+      "explanation": "Technology Readiness Levels."
+    },
+    {
+      "question": "What key aspect should be prioritized when developing a Proof of Concept (POC)?",
+      "options": [
+        "Demonstrating functional feasibility",
+        "Implementing industrial techniques for scalability",
+        "Securing patent protection during initial stages",
+        "Brainstorming creative ideas without practical implementation"
+      ],
+      "answer": 0,
+      "explanation": "Demonstrating functional feasibility."
+    },
+    {
+      "question": "What are the best practices for defining the functional requirements of a project?",
+      "options": [
+        "Conducting thorough stakeholder interviews to gather insights",
+        "Ignoring end-user feedback and relying on assumptions",
+        "Prioritizing features based on developer convenience",
+        "Overlooking the project scope and timeline"
+      ],
+      "answer": 0,
+      "explanation": "Conducting thorough stakeholder interviews to gather insights."
+    }
+  ]
+}
